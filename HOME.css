@@ -1,0 +1,348 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box
+}
+
+body {
+  	background-color: #FFA49E;
+	margin:0;
+}
+
+
+
+/*	HEADER START  */
+.headContainer {
+	padding: 5px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	overflow: hidden;
+	background-color: #FFA49E;
+	transition: 0.25s ease;
+}
+#headerLogo {
+	margin-right: 200px;
+	height: 70px;
+	width: auto;
+	}
+#headerTdSub1 {
+	vertical-align: bottom;
+	text-align: justify;
+}
+#headerSub1 {
+	font-family: 'Megrim', cursive;
+	color: #FFFFFF;
+	font-size: 20px;
+	margin-left: 200px;
+	margin-right: 50px;
+}
+#headerTitle {
+	font-family: 'Berkshire Swash', cursive;
+	color: #FFFFFF;
+	font-size: 60px;
+}
+#headerTdSub2 {
+	text-align:right;
+}
+#headerSub2 {
+	font-family: 'Megrim', cursive;
+	color: #FFFFFF;
+	font-size: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	display: none;
+}
+/*	HEADER END  */
+
+
+
+
+/*	QUOTE START  */
+#quoteDiv{
+	text-align:center;
+	padding: 100px;
+	margin-top: 20%;
+	font-size:70px;
+	background-color: #FFFFFF;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+#quoteSpeaker {
+	font-size:30px;
+}
+/*	QUOTE END  */
+
+
+
+
+/*	WHY START  */
+#whyGreen{
+	background-color: #518465;
+	color: #FFFFFF;
+	padding-bottom: 100px;
+}
+#whyCup {
+	width: 80%;
+	text-align: center;
+	background: url('UnSplash/New_Folder03/Cup.png'); background-repeat: no-repeat;
+	background-size: auto 80%;
+	background-position: center center;
+}
+#whyName {
+	text-align: center;
+	padding-top: 100px;
+	vertical-align: top;
+}
+#whyName span {
+	font-family: 'Barrio', cursive;
+	font-size: 40px;
+	color: #000000;
+}
+#whyText01 {
+	text-align: left;
+	vertical-align: top;
+	padding-top: 150px;
+	padding-left: 10px;
+	padding-right: 50px;
+}
+#whyText01 span {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 25px;
+}
+#whyText02 {
+	text-align: right;
+	vertical-align: top;
+	padding-top: 10px;
+	padding-left: 550px;
+	padding-bottom: 100px;
+}
+#whyText02 span {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 25px;
+}
+#whyText03 {
+	text-align: left;
+	vertical-align: bottom;
+	padding-top: 200px;
+	padding-right: 200px;
+	padding-bottom: 200px;
+}
+#whyText03 span {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 25px;
+}
+/*	WHY END  */
+
+
+
+
+/*	START JQUERY  */
+@media (max-width: 1024px){
+	#header {
+		max-height: 73px;
+	}
+	#headerLogo {
+		margin-right: 100px;
+		height: 50px;
+	}
+	#headerSub1 {
+		font-size: 15px;
+		margin-left: 100px;
+		margin-right: 25px;
+	}
+	#headerTitle {
+		font-size: 50px;
+	}
+	
+	#quoteDiv{
+		padding: 90px;
+		font-size: 60px;
+	}
+	#quoteSpeaker {
+		font-size:20px;
+	}
+}
+
+@media (max-width: 805px){
+	#header {
+		max-height: 65px;
+	}
+	#headerLogo {
+		margin-right: 50px;
+	}
+	#headerSub1 {
+		font-size: 12px;
+		margin-left: 50px;
+		margin-right: 10px;
+	}
+	#headerTitle {
+		font-size: 40px;
+	}
+	
+	#quoteDiv{
+		padding: 70px;
+		font-size: 50px;
+	}
+	#quoteSpeaker {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 515px){
+	#header {
+		max-height: 47px;
+	}
+	#headerLogo {
+		margin-right: 10px;
+		height: 30px;
+	}
+	#headerSub1 {
+		font-size: 12px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	#headerTitle {
+		font-size: 30px;
+	}
+	
+	#quoteDiv{
+		padding: 50px;
+		font-size: 35px;
+	}
+}
+
+@media (max-width: 365px){
+	#header {
+		max-height: 55px;
+	}
+	#headerLogo {
+		margin-right: 5px;
+		height: 25px;
+	}
+	#headerSub1 {
+		display: none;
+	}
+	#headerTitle {
+		font-size: 20px;
+	}
+	#headerSub2 {
+		display: block;
+	}
+	
+	#quoteDiv{
+		padding: 15px;
+		font-size: 18px;
+	}
+	#quoteSpeaker {
+		font-size: 8px;
+	}
+}
+
+@media (max-width: 170px){
+	#header {
+		max-height: 46px;
+	}
+	#headerLogo {
+		margin-right: 0px;
+		height: 20px;
+	}
+	#headerSub1 {
+		display: none;
+	}
+	#headerTitle {
+		font-size: 17px;
+	}
+	#headerSub2 {
+		font-size: 7px;
+		display: block;
+	}
+	
+	#quoteDiv{
+		padding: 10px;
+		font-size: 12px;
+	}
+	#quoteSpeaker {
+		font-size: 6px;
+	}
+}
+/*	END JQUERY  */
+
+
+
+
+
+
+
+
+/* Gallery Start */
+.mySlides {
+	display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  	max-width: 100%;
+	max-height: 80%;
+  	position: relative;
+  	margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  	cursor: pointer;
+	position: absolute;
+  	top: 50%;
+  	width: auto;
+  	padding: 16px;
+  	margin-top: -22px;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	font-size: 18px;
+  	transition: 0.6s ease;
+  	border-radius: 0 3px 3px 0;
+  	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#slide1, #slide2, #slide3, #slide4, #slide5 {
+	width: 100%;
+}
+/* Gallery End */
+
+
