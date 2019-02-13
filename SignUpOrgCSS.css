@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+.inputBox {
+	font-family: 'Comfortaa', cursive;
+	font-size: 13px;
+	color: #FFFFFF;
+	background : #FF5733;
+	background : rgba(255, 87, 51, 1);
+	border: none;
+	height: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+::placeholder {
+  color: #FFFFFF;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #FFFFFF;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #FFFFFF;
+}
+
+.borderLeft {
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.borderRight {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}

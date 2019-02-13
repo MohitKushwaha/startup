@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SignUpOrg</title>
+<link href="SignUpOrgCSS.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Aladin|Barrio|Berkshire+Swash|Charmonman|Comfortaa|Courgette|Freckle+Face|Fredericka+the+Great|Glass+Antiqua|Kaushan+Script|Lobster+Two|Love+Ya+Like+A+Sister|Lovers+Quarrel|Megrim|Merienda+One|Mountains+of+Christmas|Nanum+Gothic|Niconne|Oleo+Script|Satisfy|Snowburst+One" rel="stylesheet">
+</head>
+
+<body style="background-image: url('Images/SignUpOrgBack/0.75x/Artboard 1ldpi.png'); background-repeat: no-repeat; background-size: auto auto;">
+	
+	<center>
+		<div style="margin-right: 100px; text-align: center">
+			<table align="center">
+				<tbody>
+					<tr>
+						<td>
+							<img src="" alt="Logo" style="width: 50px; height: auto; margin-top: 10px; margin-right: 300px;">
+						</td>
+						<td>
+							<span style="font-family: 'Megrim', cursive; font-size: 15px; color: #FFFFFF;">MEET THE RIGHT PEOPLE</span>
+						</td>
+						<td>
+							<span style="margin-left: 100px;font-family: 'Berkshire Swash', cursive; font-size: 40px; color: #FFFFFF;">NAMEPLATE</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div style="text-align: center; width: 100%;">
+			<table align="right" style="margin-top: 60px; margin-right: 100px;">
+				<tbody>
+					<tr>
+						<td>
+							<div style="width: 600px; height: 430px; background-color: #FFC300; margin-left: 150px; margin-right: 50px;">
+								<table align="center">
+									<tbody>
+										<tr>
+											<td>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<input id="FullName" class="inputBox borderLeft borderRight" type="text" placeholder="Organisation Full Name" size="15" style="width: 223px;" required>
+												</div>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<input id="UniqueId" class="inputBox borderLeft borderRight" type="text" placeholder="Unique Identifier" size="15" style="width: 223px;" required>	
+												</div>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<input id="DOB" class="inputBox borderLeft" type="date" placeholder="Date Of Birth" size="15" style="width: 120px;" required>
+													<input id="City" class="inputBox borderRight" type="text" placeholder="City" size="15" style="width: 80px;" required>	
+												</div>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<select id="State" class="inputBox borderLeft" style="width: 120px" size="10" required>
+														<option value="State1" selected>State 1</option>
+														<option value="State2">State 2</option>
+														<option value="State3">State 3</option>
+														<option value="State4">State 4</option>
+													</select>
+													<select id="Country" class="inputBox borderRight" style="width: 120px;" required>
+														<option value="Country1" selected>Country 1</option>
+														<option value="Country2">Country 2</option>
+														<option value="Country3">Country 3</option>
+														<option value="Country4">Country 4</option>
+													</select>
+												</div>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<input id="PhoneCode" class="inputBox borderLeft" type="text" placeholder="+91" size="1" readonly style="width: 20px;" required>
+													<input id="Phone" class="inputBox borderRight" type="text" placeholder="Phone" style="width: 180px;" required>
+												</div>
+											</td>
+											
+											<td>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<select id="Unknown1" class="inputBox borderLeft borderRight" style="width: 243px;" required>
+														<option value="Unknown11" selected>India</option>
+														<option value="Unknown12">Other</option>
+													</select>
+												</div>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<input id="Unknown2" class="inputBox borderLeft borderRight" type="text" placeholder="Unknown 2" style="width: 223px;" required>
+												</div>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<input id="Email" class="inputBox borderLeft borderRight" type="email" placeholder="Email"  style="width: 223px;" required>
+												</div>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<input id="Password" class="inputBox borderLeft borderRight" type="password" placeholder="Password"  style="width: 223px;" required>
+												</div>
+												<div style="width: 250px; border: #000000 3px solid;">
+													<button id="SignUp" class="inputBox borderLeft borderRight" style="width: 100px; background-color: #C70039;" onClick="signUpVali()">Sign Up</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</td>
+						<td>
+							<div style="font-family: 'Love Ya Like A Sister', cursive; font-size: 30px; color: #FFFFFF;">
+								For Organisations
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align: center; padding-top: 15px; font-family: 'Charmonman', cursive;font-size: 15px; color: #FFFFFF;">
+							<hr>
+							<span>
+								All Copyrights With The NamePlate Company.
+							</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</center>
+
+	
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+	<script>
+	  	// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyCoTmC6FSCUpdBSZSpzMxpnR2BH_w1au6o",
+			authDomain: "nameplate-6393.firebaseapp.com",
+			databaseURL: "https://nameplate-6393.firebaseio.com",
+			projectId: "nameplate-6393",
+			storageBucket: "nameplate-6393.appspot.com",
+			messagingSenderId: "836771553675"
+	  	};
+	  	firebase.initializeApp(config);
+		
+		
+		
+		//adding String.trim() function: Not available in IE 8 and below
+		if (!String.prototype.trim) {
+			String.prototype.trim = function () {
+				return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+			};
+		};
+		
+		var fullName = document.querySelector("#FullName");
+		var uniqueId = document.querySelector("#UnqueId");
+		var dob = document.querySelector("#DOB");
+		var city = document.querySelector("#City");
+		var state = document.querySelector("#State");
+		var country = document.querySelector("#Country");
+		var phone = document.querySelector("#Phone");
+		var email = document.querySelector("#Email");
+		var password = document.querySelector("#Password");
+		var errormsg = "";
+		function signUpVali(eve) {
+			if(nameVali()){
+				if(uniqueVali()) {
+					if(dobVali()) {
+						if(cityVali()){
+							if(stateVali()){
+								if(countryVali()){
+									if(phoneVali()){
+										createUserWithEmailandPassword(email.value, password.value);
+									}
+								}
+							}
+						}
+					}
+				}
+			} else {
+				errormsg += "Wrong Org. Name !";
+			}
+		}
+		
+		var letters = /^[A-Za-z]+$/;
+		
+		function nameVali() {
+			console.log("Inside Full Name");
+			fullName.value = fullName.value.trim();
+			if(fullName.value.match(letters)){
+				return true;
+			} else {
+				alert('Username must have alphabet characters only');
+				fullName.focus();
+				return false;
+			}
+			
+		}
+		
+		function uniqueVali() {
+			console.log("Inside Unique Id");
+			return true;
+		}
+		
+		function dobVali() {
+			console.log("Inside DOB");
+			return true;
+		}
+		
+		function cityVali() {
+			console.log("Inside City");
+			city.value = city.value.trim();
+			if(city.value.match(letters)){
+				return true;
+			} else {
+				alert('Username must have alphabet characters only');
+				city.focus();
+				return false;
+			}
+		}
+		
+		function stateVali() {
+			console.log("Inside State");
+			return true;
+		}
+		
+		function countryVali() {
+			console.log("Inside Country");
+			return true;
+		}
+		
+		function phoneVali() {
+			console.log("Inside Phone");
+			return true;
+		}
+		
+		function emailVali() {
+			console.log("Inside Email");
+			return true;
+		}
+		
+		function passwordVali() {
+			console.log("Inside Password");
+			return true;
+		}
+		
+	</script>
+</body>
+</html>
